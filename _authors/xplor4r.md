@@ -1,5 +1,5 @@
 ---
-name: Jo Byeonggeun
+name: bbangjo
 username: bbangjo
 bio: ""
 avatar: xplor4r.png
