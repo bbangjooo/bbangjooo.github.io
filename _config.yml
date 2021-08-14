@@ -29,7 +29,7 @@ typewrite-text: bbangjo's portfolio site.
 # Experiences
 author_work_experiences:
             - company_name: Corca AI
-              company_logo: google.png
+              company_logo: corca.png
               company_url: https://www.corca.ai/
               designation: ML Engineer
               description: ""
@@ -37,7 +37,7 @@ author_work_experiences:
 
 # Education
 author_education_details:
-              - college_logo: mit.png
+              - college_logo: korea.png
                 college_name: Korea University
                 college_url: https://oku.korea.ac.kr/
                 college_degree: Department of Cyber defense
