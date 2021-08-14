@@ -123,6 +123,17 @@ defaults:
     values:
       layout: author
       permalink: /blog/authors/:slug
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
 
 # Build settings
 plugins:
