@@ -63,7 +63,7 @@ instagram_username: bban9_j0
 
 
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
-
+disqus_url: 
 disqus_id: blog-5znfc8zdfx
 #hyvor_talk_website_id: 476
 
@@ -123,16 +123,6 @@ defaults:
     values:
       layout: author
       permalink: /blog/authors/:slug
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
 
 
 # Build settings
