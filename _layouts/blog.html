@@ -9,8 +9,10 @@ layout: default
                       {% for post in paginator.posts %}
                       <div class="card blog-post">
                       {% if post.thumbnail contains '://' %}
+                          <p> Good </p>
                           <img class="card-img-top" src="{{ post.thumbnail }}" alt="{{ post.title }}">
                       {% else %}
+                          <p> SIbal </p>
                           <img class="card-img-top" src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="{{ post.title }}">
                       {% endif %}
                           <div class="card-body center">
