@@ -24,7 +24,7 @@ permalink: /blog/wddfm
 
 ![image](https://user-images.githubusercontent.com/51329156/129478615-c56a6863-e231-445e-80bf-2e7bf54ea8d0.png)
 
-위 그림은 추천 시스템의 overview 입니다. **Retrieval** 과정에서 user의 검색 쿼리를 바탕으로 DB에서 후보 앱들을 추출해냅니다. 그리고 **Ranking** 과정에서 앱들의 점수를 매기고, 그 점수를 바탕으로 랭킹을 매기게 됩니다. 여기서 말하는 점수는 $$P(y|x)$$ 즉 user 정보, context 정보 등을 포함한  x(국적, 언어, ..)를 바탕으로 y앱에 action할 확률입니다. Wide&Deep이 바로 점수를 매기는데 사용되는 거죠. 
+위 그림은 추천 시스템의 overview 입니다. **Retrieval** 과정에서 user의 검색 쿼리를 바탕으로 DB에서 후보 앱들을 추출해냅니다. 그리고 **Ranking** 과정에서 앱들의 점수를 매기고, 그 점수를 바탕으로 랭킹을 매기게 됩니다. 여기서 말하는 점수는 $$P(y\vertx)$$ 즉 user 정보, context 정보 등을 포함한  x(국적, 언어, ..)를 바탕으로 y앱에 action할 확률입니다. Wide&Deep이 바로 점수를 매기는데 사용되는 거죠. 
 
 
 
