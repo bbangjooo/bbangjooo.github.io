@@ -1,8 +1,8 @@
 ---
 name: bbangjo
 username: bbangjo
-bio: ""
-avatar: xplor4r.png
+bio: "Hello World"
+avatar: bbangjo.png
 email: airmancho@korea.ac.kr
 social:
     - title: "github"
