@@ -4,7 +4,7 @@ author: bbangjo
 title: "AutoRec: Autoencoders Meet Collaborative Filtering"
 date: 2021-02-28
 thumbnail: https://user-images.githubusercontent.com/51329156/106574235-00e19300-657e-11eb-8a99-c5192cd8cabd.png
-category: Recommendation System
+category: ['Recommendation System']
 comments: true
 summary: Auto-Encoder framework for Recommendation System
 permalink: /blog/recsys-autorec

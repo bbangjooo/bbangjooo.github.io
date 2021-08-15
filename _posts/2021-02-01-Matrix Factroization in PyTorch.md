@@ -4,7 +4,7 @@ author: bbangjo
 title: Matrix Factorization with PyTorch using movielens dataset
 date: 2021-02-18
 thumbnail: https://user-images.githubusercontent.com/51329156/100213332-d35ee480-2f51-11eb-9d0b-20b17ed189d8.png
-category: Recommendation System
+category: ['Recommendation System']
 comments: true
 summary: MF PyTorch implementation
 permalink: /blog/recsys-mfpytorch
