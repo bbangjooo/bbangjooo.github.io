@@ -28,6 +28,8 @@ permalink: /blog/wddfm
 
 
 
+
+
 ###  WIDE & DEEP LEARNING
 
 위에서 **Why(What problem)?**에 대한 답을 얻었습니다. 구글 플레이의 추천 앱 랭킹 성능 개선, 즉 CTR을 높이는 것이죠. 그럼 이제 **How?**에 대한 답인 모델을 좀 더 알아보겠습니다.
