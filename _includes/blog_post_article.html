@@ -27,11 +27,19 @@
   </div>
 
   <div class="card-body" itemprop="articleBody">
+  {% if page.thumbnail contains '://' %}
+    <img
+      class="card-img-top"
+      src="{{ page.thumbnail }}"
+      alt="{{ post.title }}"
+    />
+  {% else %}
     <img
       class="card-img-top"
       src="{{site.url}}{{site.baseurl}}{{ page.thumbnail }}"
       alt="{{ post.title }}"
     />
+  {% endif%}
     <br />
     <br />
     {{ content }}
