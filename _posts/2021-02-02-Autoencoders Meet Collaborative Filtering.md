@@ -6,6 +6,7 @@ date: 2021-02-28
 thumbnail: https://user-images.githubusercontent.com/51329156/106574235-00e19300-657e-11eb-8a99-c5192cd8cabd.png
 category: ['Recommendation System']
 comments: true
+usemathjax: true
 summary: Auto-Encoder framework for Recommendation System
 permalink: /blog/recsys-autorec
 ---
@@ -49,22 +50,22 @@ permalink: /blog/recsys-autorec
 
 ### THE AUTOREC MODEL
 
-CF에서 m명의 사용자와, n개의 아이템에 대해 rating matrix $R \in \mathbb{R}^{m \times n}$를 가집니다. 각 User u는 item에 대한 평가 벡터 $r^{(u)} = (R_{u1},R_{u2},...,R_{un})$를 가지고 Item i는 마찬가지로 $r^{(i)} = (R_{1i},R_{2i},...,R_{mi})$로 표현될 수 있습니다.  앞으로의 설명은 Item-based를 기반으로 하겠습니다.  이 모델에서 하려는 일은 원래 입력값 $r^{(i)}$와 오토인코더를 통해 재구성한 입력값 간의 오차를 구해 그 오차를 줄여나가는 것입니다. 입력을 재구성한 값, 즉 오토인코더를 거친 output은 수식으로 다음과 같이 나타냅니다.
+CF에서 m명의 사용자와, n개의 아이템에 대해 rating matrix $$R \in \mathbb{R}^{m \times n}$$를 가집니다. 각 User u는 item에 대한 평가 벡터 $$r^{(u)} = (R_{u1},R_{u2},...,R_{un})$$를 가지고 Item i는 마찬가지로 $$r^{(i)} = (R_{1i},R_{2i},...,R_{mi})$$로 표현될 수 있습니다.  앞으로의 설명은 Item-based를 기반으로 하겠습니다.  이 모델에서 하려는 일은 원래 입력값 $$r^{(i)}$$와 오토인코더를 통해 재구성한 입력값 간의 오차를 구해 그 오차를 줄여나가는 것입니다. 입력을 재구성한 값, 즉 오토인코더를 거친 output은 수식으로 다음과 같이 나타냅니다.
 
-$h(r;\theta) = f(W \\cdot g(Vr + \mu) + b)$
+$$h(r;\theta) = f(W \\cdot g(Vr + \mu) + b)$$
 
-$ f,g $는 각각 활성화 함수이고, 파라미터 각각의 사이즈는 다음과 같습니다.
+$$ f,g $$는 각각 활성화 함수이고, 파라미터 각각의 사이즈는 다음과 같습니다.
 
-$W \\in R^{d \times k} ,V \in R^{k \times d}, \mu \in R^{k},b \in R^{d}$
+$$W \\in R^{d \times k} ,V \in R^{k \times d}, \mu \in R^{k},b \in R^{d}$$
 
-여기서 $d$는 m 혹은 n이고 $k$는 hidden_layer의 feature 수 입니다. 
+여기서 $$d$$는 m 혹은 n이고 $$k$$는 hidden_layer의 feature 수 입니다. 
 
 Objective funtion은 L2 loss를 손실함수로 사용하는 L2 Regularization을 사용합니다.
 
 ![image](https://user-images.githubusercontent.com/51329156/106887861-1d6dfe80-6729-11eb-9037-79926af7e822.png)
 
 
-$\left \|\cdot\right \|_{O}^{2}$의 의미는 관측된 rating, 즉 interaction matrix에서 비어있지 않은 요소에 대해서만 고려하겠다는 의미입니다. MF와는 달리 $g(\cdot)$에서 non-linear 한 활성화 함수를 사용함으로써 latent vector를 더 잘 표현할 수 있다고 합니다.
+$$\left \|\cdot\right \|_{O}^{2}$$의 의미는 관측된 rating, 즉 interaction matrix에서 비어있지 않은 요소에 대해서만 고려하겠다는 의미입니다. MF와는 달리 $$g(\cdot)$$에서 non-linear 한 활성화 함수를 사용함으로써 latent vector를 더 잘 표현할 수 있다고 합니다.
 
 ## PyTorch로 구현
 
@@ -107,7 +108,7 @@ class MovielensDataset(Dataset):
 
 ### 📖 Model
 
-오토인코더는 **encoder**와 **decoder**로 이루어져있다고 했으니 모델에서도 똑같이 구현해줍니다. 위의 수식에서는 $h(\cdot)$에 해당하는 코드입니다.
+오토인코더는 **encoder**와 **decoder**로 이루어져있다고 했으니 모델에서도 똑같이 구현해줍니다. 위의 수식에서는 $$h(\cdot)$$에 해당하는 코드입니다.
 
 ``` python
 class AutoRec(nn.Module):
